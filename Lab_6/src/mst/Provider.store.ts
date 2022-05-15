@@ -1,3 +1,4 @@
+
 import { types } from "mobx-state-tree";
 import Person from './Person.model';
 import Student from './Student.model';
@@ -52,8 +53,8 @@ const initialState = {
     persons: [
         {
             id: 'p-001',
-            firstName: "Rogojina",
-            secondName:"Andrie",
+            firstName: "Petru",
+            secondName:"Cristea",
             gender:"male",
             age:21,
             height:200
@@ -61,7 +62,7 @@ const initialState = {
         {
             id: 'p-002',
             firstName: "Rusnac",
-            secondName:"Vasile",
+            secondName:"Sandu",
             gender:"male",
             age:13,
             height:30
@@ -97,3 +98,28 @@ const initialState = {
     ]
 }
 export default rootStore
+//   if (process.browser) {
+    // const data = localStorage.getItem("rootState");
+    // if (data) {
+    //     const json = JSON.parse(data);
+    //     if (Root.create(json)) {
+    //         initialState = Root.create(json);
+    //     }
+    // }
+//   }
+//   onSnapshot(rootStore, (snapshot) => {
+//     console.log("Snapshot: ", snapshot);
+//     localStorage.setItem("rootState", JSON.stringify(snapshot));
+//   });
+
+// export type RootInstance = Instance<typeof Root>;
+// const RootStoreContext = createContext<null | RootInstance>(null);
+// export const Provider = RootStoreContext.Provider;
+// export function useMst() {
+//     const store = useContext(RootStoreContext);
+//     if (store === null) {
+//         throw new Error("Store cannot be null, please add a context provider");
+//     }
+//     console.log(store)
+//     return store;
+// }
